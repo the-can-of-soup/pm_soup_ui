@@ -10,7 +10,8 @@
 Throughout this documentation an "object" is defined as a value from the Objects extension of the structure:
 ```
 {
-    "type": <[String] object type>,
+    "type": <[String] type of the object>,
+    <[Any]>: <[Any]>,
     ...
 }
 ```
@@ -18,35 +19,41 @@ Throughout this documentation an "object" is defined as a value from the Objects
 A "generic object" is defined as *any* value from the Objects extension, including objects:
 ```
 {
+    <[Any]>: <[Any]>,
     ...
 }
 ```
 
 Every object has a `type` key which should be a string representing the object's type. The rest of the keys will have a structure depending on the type.
 
+## Data Structures
+
 Whenever a data structure is documented, keys or values in angled brackets `<>` are placeholders. The part enclosed in square brackets `[]` is the expected type, and the rest is the description of the placeholder. The following table shows what each placeholder type means:
 
 | Type              | Meaning                                           | Examples                                  |
 |-------------------|---------------------------------------------------|-------------------------------------------|
-| `String`          | A string.                                         | `"foo"`, `"Hello, World!"`                |
+| `String`          | A string or number.                               | `"foo"`, `"Hello, World!"`, `7`           |
 | `Number`          | A float or integer.                               | `0.5`, `-3`, `NaN`, `Infinity`            |
 | `Boolean`         | `true` or `false`.                                | `true`, `false`                           |
+| `Vector`          | A value from the Vectors extension.               | `Vector(5, 3)`, `Vector(-2.3, 1)`         |
+| `Target`          | A value from the Targets extension.               | `Target(Sprite1)`, `Target(Stage)`        |
+| `Any`             | Any type, including arrays and generic objects.   | `false`, `{}`, `[-Infinity, "foo"]`, `6`  |
 | Other             | An object of the type given.                      | `{"type": "soupui_widget_id", "id": 4}`   |
 
-In data structure documentation, `...` in an array means the array may have any number of values structured like the last value listed. For example:
+`...` in an array means the array may have any number of values structured like the last value listed. For example:
 ```
 [
     <[String] the name of the randomizer log>,
     {
-        "seed": <[Number] the seed before random() was called>,
-        "time": <[Number] the value of the timer when random() was called>
+        "seed": <[Number] seed before random() was called>,
+        "time": <[Number] value of the timer when random() was called>
     },
     ...
 ]
 ```
 The above structure defines an array starting with a string, and then containing any number of elements following the structure of the generic object shown.
 
-In data structure documentation, `...` in a generic object means the generic object may have number of key-value pairs structured like the last pair listed. For example:
+`...` in a generic object means the generic object may have number of key-value pairs structured like the last pair listed. For example:
 ```
 {
     "sprite_count": <[Number] the number of sprites>,
@@ -60,15 +67,24 @@ The above structure defines a generic object starting with a `sprite_count` key,
 
 These are the object types used by SoupUI.
 
-### `soupui_widget_id`
-
+...TO-DO...
 
 ## Variables
 
 These are the variables used by SoupUI. These variables are not intended to be directly modified.
 
 ### `SoupUI: stage size vector`
+```
+<[Vector] stage size in pixels>
+```
 The size of the stage in pixels as a vector.
 
 ### `SoupUI: widgets`
+```
+<[soupui_widgets_list] state of the UI>
+```
 The full state of the UI as a `soupui_widgets_list` object.
+
+## Blocks
+
+...TO-DO...
