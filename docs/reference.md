@@ -8,7 +8,7 @@
 ## Objects
 
 Throughout this documentation an "object" is defined as a value from the Objects extension of the structure:
-```JSON
+```
 {
     "type": <[String] object type>,
     ...
@@ -16,7 +16,7 @@ Throughout this documentation an "object" is defined as a value from the Objects
 ```
 
 A "generic object" is defined as *any* value from the Objects extension, including objects:
-```JSON
+```
 {
     ...
 }
@@ -34,7 +34,7 @@ Whenever a data structure is documented, keys or values in angled brackets `<>` 
 | Other             | An object of the type given.                      | `{"type": "soupui_widget_id", "id": 4}`   |
 
 In data structure documentation, `...` in an array means the array may have any number of values structured like the last value listed. For example:
-```JSON
+```
 [
     <[String] the name of the randomizer log>,
     {
@@ -47,7 +47,7 @@ In data structure documentation, `...` in an array means the array may have any 
 The above structure defines an array starting with a string, and then containing any number of elements following the structure of the generic object shown.
 
 In data structure documentation, `...` in a generic object means the generic object may have number of key-value pairs structured like the last pair listed. For example:
-```JSON
+```
 {
     "sprite_count": <[Number] the number of sprites>,
     <[String] the name of the sprite>: <[Boolean] whether the sprite should be visible>,
