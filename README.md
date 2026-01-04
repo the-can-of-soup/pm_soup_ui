@@ -1,6 +1,10 @@
 # SoupUI
 A user interface "library" for [PenguinMod](https://penguinmod.com/).
 
+> [!IMPORTANT]
+>
+> This is ***very*** unfinished, not in a usable state, and pretty much abandoned. RIP.
+
 ## Installation
 1. Go to my project hosted here *(The project isn't public yet)*, or download [SoupUI.pmp](https://github.com/the-can-of-soup/pm_soup_ui/raw/refs/heads/main/SoupUI.pmp) and open it in the [editor](https://studio.penguinmod.com/editor.html).
 2. Save the sprite "SoupUI" to your backpack.
